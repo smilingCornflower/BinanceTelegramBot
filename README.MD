@@ -64,7 +64,7 @@ Alerts are mostly individual and everyone puts their own logic that they want.
 In the file strategies.py there is an example of two alerts.
 
 
-**strategy_1** is a function that outputs a report based on a formula (the formula is random).   
+**strategy_1** is a function that outputs a report based on a formula (the formula is from a book of investment).   
 **start_strategy_1** It works in a separate thread, 
 ```python
 start_strategy_1_thread = threading.Thread(target=start_strategy_1, args=[currency])

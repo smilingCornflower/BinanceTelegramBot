@@ -2,3 +2,7 @@ venv
 secret.py
 .idea
 __pycache__/
+csv/
+script.py
+log.txt
+
