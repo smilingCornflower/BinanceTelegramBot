@@ -11,7 +11,7 @@ HOUR = client.KLINE_INTERVAL_1HOUR
 MIN30 = client.KLINE_INTERVAL_30MINUTE
 
 
-def get_candles(currency: str, start_time_mode: str, interval_mode='hour'):
+def get_candles(currency: str, start_time_mode: str, interval_mode='hour') -> list[dict]:
     output = []
 
     match start_time_mode:

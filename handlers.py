@@ -1,5 +1,5 @@
-from constants import bot, currency, developer_id, NOTUSDT, IOUSDT, STRATEGY_CURRENT
-from strategies import strategy_1, strategy_2, strategy_3, strategy_4
+from constants import bot, currency, developer_id, NOTUSDT, IOUSDT
+from strategies import strategies
 from services import create_csv
 import os
 
@@ -39,24 +39,40 @@ def get_csv_month(message):
 def get_csv_year(message):
     get_csv_pattern(message, start_time_mode='year', interval_mode='min30')
 
+
 @bot.message_handler(commands=['get_strategy_1'])
 def get_strategy_1(message):
-    output_text = strategy_1(currency=STRATEGY_CURRENT, only_output_text=True)
+    output_text = strategies(necessary_strategy='strategy_1')
     bot.send_message(message.chat.id, text=output_text, parse_mode='HTML')
 
 @bot.message_handler(commands=['get_strategy_2'])
 def get_strategy_2(message):
-    output_text = strategy_2(currency=STRATEGY_CURRENT, only_output_text=True)
+    output_text = strategies(necessary_strategy='strategy_2')
     bot.send_message(message.chat.id, text=output_text, parse_mode='HTML')
 
 @bot.message_handler(commands=['get_strategy_3'])
 def get_strategy_2(message):
-    output_text = strategy_3(currency=STRATEGY_CURRENT, only_output_text=True)
+    output_text = strategies(necessary_strategy='strategy_3')
     bot.send_message(message.chat.id, text=output_text, parse_mode='HTML')
 
 @bot.message_handler(commands=['get_strategy_4'])
 def get_strategy_2(message):
-    output_text = strategy_4(currency=STRATEGY_CURRENT, only_output_text=True)
+    output_text = strategies(necessary_strategy='strategy_4')
+    bot.send_message(message.chat.id, text=output_text, parse_mode='HTML')
+
+@bot.message_handler(commands=['get_strategy_5'])
+def get_strategy_2(message):
+    output_text = strategies(necessary_strategy='strategy_5')
+    bot.send_message(message.chat.id, text=output_text, parse_mode='HTML')
+
+@bot.message_handler(commands=['get_strategy_6'])
+def get_strategy_2(message):
+    output_text = strategies(necessary_strategy='strategy_6')
+    bot.send_message(message.chat.id, text=output_text, parse_mode='HTML')
+
+@bot.message_handler(commands=['get_strategy_7'])
+def get_strategy_2(message):
+    output_text = strategies(necessary_strategy='strategy_7')
     bot.send_message(message.chat.id, text=output_text, parse_mode='HTML')
 
 # NOTUSDT handlers -----------------------------------------------------------
